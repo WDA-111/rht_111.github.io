@@ -3,17 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: 0px;
 }
-body{
+
+body {
     width: 100%;
     height: 100%;
     background: #06074bdc;
@@ -21,12 +23,13 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
-body::before{
+
+body::before {
     animation: anima2 6s linear infinite;
     margin: 50px;
     content: '';
     position: absolute;
-    background: linear-gradient(0deg, rgba(13, 255, 235, 0.521),rgba(13, 255, 235, 0.521),rgba(13, 255, 235, 0.521),rgba(13, 255, 235, 0.521),rgba(13, 255, 235, 0.521));
+    background: linear-gradient(0deg, rgba(13, 255, 235, 0.521), rgba(13, 255, 235, 0.521), rgba(13, 255, 235, 0.521), rgba(13, 255, 235, 0.521), rgba(13, 255, 235, 0.521));
     top: -5%;
     left: -5%;
     filter: blur(50px);
@@ -34,15 +37,16 @@ body::before{
     width: 20%;
     border-radius: 50%;
     z-index: -100;
-    
+
 }
-body::after{
+
+body::after {
     animation: anima3 6s linear infinite;
     animation-delay: -6s;
     margin: 50px;
     content: '';
     position: absolute;
-    background: linear-gradient(0deg, rgba(221, 17, 160, 0.521),rgba(221, 17, 160, 0.521),rgba(221, 17, 160, 0.521),rgba(221, 17, 160, 0.521),rgba(221, 17, 160, 0.521));
+    background: linear-gradient(0deg, rgba(221, 17, 160, 0.521), rgba(221, 17, 160, 0.521), rgba(221, 17, 160, 0.521), rgba(221, 17, 160, 0.521), rgba(221, 17, 160, 0.521));
     bottom: -5%;
     right: -5%;
     filter: blur(50px);
@@ -50,51 +54,57 @@ body::after{
     width: 20%;
     border-radius: 50%;
     z-index: -100;
-    
+
 }
+
 @keyframes anima2 {
-    0%{
+    0% {
         top: -5%;
         left: -5%;
     }
-    
-    50%{
+
+    50% {
         top: 90%;
         left: -5%;
     }
-    100%{
+
+    100% {
         top: -5%;
         left: -5%;
     }
 }
+
 @keyframes anima3 {
-    0%{
+    0% {
         bottom: -5%;
         right: -5%;
     }
-    
-    50%{
+
+    50% {
         bottom: 90%;
         right: -5%;
     }
-    100%{
+
+    100% {
         bottom: -5%;
         right: -5%;
     }
 }
-#nbox{
+
+#nbox {
     margin: 10px;
     overflow: hidden;
     position: relative;
-    background:#282963 ;
+    background: #282963;
     width: auto;
     height: 110px;
     border-radius: 3px;
 }
-#Navbar{    
+
+#Navbar {
     z-index: 10;
     position: absolute;
-    background:#061d5e ;
+    background: #061d5e;
     inset: 3px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -105,14 +115,16 @@ body::after{
     align-items: center;
     justify-content: space-between;
 }
-.hambarger{
+
+.hambarger {
     position: absolute;
     right: 40px;
     top: 42px;
     display: none;
     cursor: pointer;
 }
-.bar{
+
+.bar {
     display: block;
     width: 25px;
     height: 3px;
@@ -121,44 +133,51 @@ body::after{
     transition: all 0.3s ease-in-out;
     background-color: rgb(255, 255, 255);
 }
-@keyframes nav{
-    0%{
+
+@keyframes nav {
+    0% {
         position: absolute;
         top: -100%;
     }
-    100%{
+
+    100% {
         position: absolute;
         top: 0px;
     }
 }
-@media (max-width:1750px){
-    .hambarger{
+
+@media (max-width:1750px) {
+    .hambarger {
         position: fixed;
         right: 40px;
         top: 42px;
         display: none;
         cursor: pointer;
-        
+
         display: block;
     }
-    .hambarger.active .bar:nth-child(2){
+
+    .hambarger.active .bar:nth-child(2) {
         opacity: 0;
     }
 
-    .hambarger.active .bar:nth-child(1){
+    .hambarger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
-    .hambarger.active .bar:nth-child(3){
+
+    .hambarger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-    .navi.active{
+
+    .navi.active {
         left: 0;
     }
-    .navi::before{
+
+    .navi::before {
         z-index: -10;
-        content:"";
-        position: 
-        absolute;
+        content: "";
+        position:
+            absolute;
         top: 0;
         bottom: 0;
         right: 0;
@@ -166,7 +185,8 @@ body::after{
         background: rgba(0, 0, 0, 0.808);
         filter: blur(80px);
     }
-    .navi{
+
+    .navi {
         overflow: scroll;
         justify-content: center;
         align-items: center;
@@ -177,15 +197,18 @@ body::after{
         flex-direction: column;
         transition: 0.3s ease;
     }
-    .navi.active li:hover{
+
+    .navi.active li:hover {
         translate: 30px 0px;
-    }   
+    }
 }
-#navbar:hover{
+
+#navbar:hover {
     transition: all 0.5s ease;
-    background-color:#08132056;
+    background-color: #08132056;
 }
-.navi{
+
+.navi {
     overflow: scroll;
     padding: 50px;
     display: flex;
@@ -195,7 +218,7 @@ body::after{
     align-items: center;
 }
 
-#logo img{
+#logo img {
     border-left: 2px solid rgb(5, 255, 242);
     border-top: 2px solid rgb(5, 255, 242);
     border-right: 2px solid rgb(5, 255, 242);
@@ -210,54 +233,57 @@ body::after{
     font-family: 'Kanit', sans-serif;
     font-size: 25px;
     font-weight: bolder;
-    color:  rgb(42, 195, 255);
+    color: rgb(42, 195, 255);
     padding: 10px;
     border: 3px solid rgba(0, 240, 240, 0);
     border-radius: 3px;
 }
 
-.navi li:hover{
+.navi li:hover {
     translate: 0px -10px;
     color: rgb(255, 255, 255);
-    border: 3px solid  rgb(17, 247, 255);
+    border: 3px solid rgb(17, 247, 255);
     transition: all 0.5s ease;
 }
 
-#nbox::before{
+#nbox::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100px;
-    background:linear-gradient(0deg,transparent,rgb(32, 155, 255),rgb(32, 155, 255));
+    background: linear-gradient(0deg, transparent, rgb(32, 155, 255), rgb(32, 155, 255));
     top: -50%;
     left: -50%;
     transform-origin: bottom right;
     animation: anima 6s linear infinite;
 }
-#nbox::after{
+
+#nbox::after {
     content: '';
     position: absolute;
     width: 100%;
     height: 100px;
-    background:linear-gradient(0deg,transparent,rgb(192, 32, 255),rgb(192, 32, 255));
+    background: linear-gradient(0deg, transparent, rgb(192, 32, 255), rgb(192, 32, 255));
     top: -50%;
     left: -50%;
     transform-origin: bottom right;
     animation: anima 6s linear infinite;
     animation-delay: -3s;
 }
+
 @keyframes anima {
-    0%{
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
 
 
 /* HOME SECTION  */
-#HOME::before{
+#HOME::before {
     content: '';
     top: 140px;
     right: 0;
@@ -270,17 +296,19 @@ body::after{
     height: 440px;
     background-size: cover;
     opacity: 0.75;
-    
-    
+
+
 }
+
 #homeb {
     margin: 10px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#homeb h1{
+
+#homeb h1 {
     animation: ani1 linear 4s infinite;
     margin-top: 100px;
     color: white;
@@ -288,23 +316,25 @@ body::after{
     text-align: center;
     font-family: 'Josefin Sans';
 }
+
 #hl {
     background-color: aliceblue;
     height: 2px;
     width: 500px;
     margin-bottom: 20px;
-    
+
 }
 
-#homeb p{
+#homeb p {
     width: 520px;
     letter-spacing: 2px;
     color: aliceblue;
     font-size: 25px;
     text-align: center;
     font-family: 'Bebas Neue';
-    
+
 }
+
 #homeb a {
     animation: ani2 linear 0.5s infinite;
     font-family: 'Bebas Neue';
@@ -317,37 +347,47 @@ body::after{
     margin-top: 30px;
     margin-bottom: 130px;
 }
- @keyframes ani1 {
-    0%{
+
+@keyframes ani1 {
+    0% {
         color: rgb(255, 28, 28);
     }
-    16.66%{
+
+    16.66% {
         color: rgb(255, 230, 0);
     }
-    32.66%{
+
+    32.66% {
         color: rgb(41, 247, 58);
     }
-    48.66%{
+
+    48.66% {
         color: rgb(0, 225, 255);
     }
-    64.66%{
+
+    64.66% {
         color: rgb(76, 0, 255);
     }
-    80%{
+
+    80% {
         color: rgb(255, 0, 255);
     }
-    100%{
+
+    100% {
         color: rgb(255, 0, 0);
     }
- }
- @keyframes ani2 {
-    0%{
+}
+
+@keyframes ani2 {
+    0% {
         color: rgb(44, 87, 226);
     }
-    100%{
+
+    100% {
         color: rgb(20, 91, 100);
     }
- }
+}
+
 .box {
     background: #0000000e;
     border: 2px solid rgb(0, 255, 255);
@@ -359,25 +399,28 @@ body::after{
     justify-content: space-around;
     padding: 20px;
 }
-#YOUTUBE h2{
+
+#YOUTUBE h2 {
     color: white;
-    
+
 }
-#yu{
+
+#yu {
     background: white;
     width: 120px;
     height: 2px;
 }
 
 
-#youtube{
+#youtube {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
-#abouty h2{
+
+#abouty h2 {
     position: relative;
     top: -18px;
     letter-spacing: 2px;
@@ -385,7 +428,8 @@ body::after{
     font-size: 25px;
     color: rgb(255, 255, 255);
 }
-#abouty p{
+
+#abouty p {
     position: relative;
     top: -10px;
     letter-spacing: 1px;
@@ -394,7 +438,8 @@ body::after{
     color: white;
     width: 200px;
 }
-#yc{
+
+#yc {
     background: rgba(255, 255, 255, 0.082);
     padding: 10px;
     display: flex;
@@ -405,30 +450,33 @@ body::after{
     width: 300px;
     margin-top: 50px;
     border-radius: 5px;
-    border-top: 1px solid rgb(255, 255, 255,0.5);
-    border-left: 1px solid rgb(255, 255, 255,0.5);
+    border-top: 1px solid rgb(255, 255, 255, 0.5);
+    border-left: 1px solid rgb(255, 255, 255, 0.5);
     box-shadow: 5px 5px 25px #0000007d;
 }
 
-#yc h3{
+#yc h3 {
     animation: ani7 5s linear infinite;
     text-align: center;
     font-size: 30px;
     color: rgb(255, 255, 255);
     margin: 5px;
 }
-#yc h4{
+
+#yc h4 {
     color: white;
     font-size: 20px;
-    
+
 }
-#yc p{
+
+#yc p {
     color: white;
     font-size: 20px;
     margin: 8px;
-    
+
 }
-#sub{
+
+#sub {
     display: inline;
     color: white;
     font-size: 25px;
@@ -436,12 +484,14 @@ body::after{
     padding: 5px 20px;
     border-radius: 5px;
 }
-#sub:hover{
+
+#sub:hover {
     background: rgba(150, 140, 140, 0.8);
     color: black;
     transition: all ease 0.5s;
 }
-#vs{
+
+#vs {
     animation: ani9 linear 1s infinite;
     padding: 5px 48px;
     font-size: 25px;
@@ -451,57 +501,108 @@ body::after{
     background: #3fd0e4a1;
     border-radius: 5px;
 }
-#yc img{
+
+#yc img {
     animation: ytani 2s infinite;
-    animation-timing-function:cubic-bezier(1, 0.01, 0, 1.04) ;
+    animation-timing-function: cubic-bezier(1, 0.01, 0, 1.04);
     margin-top: 10px;
     height: 150px;
     border-radius: 50%;
-    border:2px solid white ;
+    border: 2px solid white;
 }
+
 @keyframes ani9 {
-    0%{
-        background:#3fd0e4a1;
+    0% {
+        background: #3fd0e4a1;
     }
-    50%{
-        background:#fe47e582;
+
+    50% {
+        background: #fe47e582;
     }
-    100%{
-        background:#95ff36a1;
+
+    100% {
+        background: #95ff36a1;
     }
 }
-@keyframes ytani{
-0%{
-    rotate: 0deg;
-}
-100%{
-    rotate: 360deg;
-}
+
+@keyframes ytani {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
 }
 
 @keyframes ani7 {
-    0%{
+    0% {
         color: rgb(243, 83, 54);
     }
-    16.66%{
+
+    16.66% {
         color: rgb(255, 230, 0);
     }
-    32.66%{
+
+    32.66% {
         color: rgb(41, 247, 58);
     }
-    48.66%{
+
+    48.66% {
         color: rgb(0, 225, 255);
     }
-    64.66%{
+
+    64.66% {
         color: rgb(76, 0, 255);
     }
-    80%{
+
+    80% {
         color: rgb(255, 0, 255);
     }
-    100%{
+
+    100% {
         color: rgb(255, 0, 0);
     }
- }
- #instragram{
+}
+
+@media (max-width:626px) {
+    #youtube {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #abouty {
+        margin-top: 50px;
+        order: 2;
+    }
+
+    #yc {
+        order: 1;
+    }
+    #homeb p{
+        width: auto;
+    }
+
+}
+
+@media (max-width: 547px) {
+    #hl {
+        width: 380px;
+    }
+}
+@media (max-width: 412px) {
+    #hl {
+        width: 314px;
+    }
+}
+@media (max-width: 372px) {
+    #hl {
+        width: 240px;
+    }
+}
+
+
+
+#instragram {
     margin-top: 70px;
- }
+}
