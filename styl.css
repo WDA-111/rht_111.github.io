@@ -585,19 +585,51 @@ body::after {
 
 }
 
+@media (max-width: 630px) {
+    #HOME {
+        margin-bottom: 80px;
+    }
+}
 @media (max-width: 547px) {
+    #HOME {
+        margin-bottom: 80px;
+    }
     #hl {
-        width: 380px;
+        width: 320px;
+    }
+    #homeb h1{
+        font-size: 30px;
+    }
+    #homeb p{
+        font-size: 20px;
     }
 }
 @media (max-width: 412px) {
+    #HOME {
+        margin-bottom: 100px;
+    }
     #hl {
         width: 314px;
     }
+    #homeb h1{
+        font-size: 25px;
+    }
+    #homeb p{
+        font-size: 20px;
+    }
 }
 @media (max-width: 372px) {
+    #HOME {
+        margin-bottom: 80px;
+    }
     #hl {
         width: 240px;
+    }
+    #homeb h1{
+        font-size: 20px;
+    }
+    #homeb p{
+        font-size: 15px;
     }
 }
 
